@@ -31,7 +31,8 @@ jobs:
           use-public-rspm: true
       - name: Install dependencies
         run: |
+          # test r universe
           try(install.packages("varnish", repos = "https://carpentries.r-universe.dev/"))
           install.packages("remotes")
-          remotes::install_packages("carpentries/vise")
+          remotes::install_github("carpentries/vise")
         shell: Rscript {0}
