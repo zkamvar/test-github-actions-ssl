@@ -26,5 +26,14 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: get SSL thing for github api
-        run: curl -v https://raw.githubusercontent.com
+      - name: this will work
+        run: |
+          curl --version
+          curl -v https://raw.githubusercontent.com
+      # Runs a single command using the runners shell
+      - name: update curl
+        run: sudo apt update -y && sudo apt-get install --fix-missing -y libcurl4-openssl-dev
+      - name: this will fail
+        run: |
+          curl --version
+          curl -v https://raw.githubusercontent.com
