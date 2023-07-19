@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: get SSL thing for github api
-        run: curl https://api.github.com/ --verbose
+        run: curl -v https://raw.githubusercontent.com
